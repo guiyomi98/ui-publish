@@ -1,0 +1,45 @@
+// dropdown
+
+.dropdown {
+    $height: 4.8rem; // 셀렉트박스 높이
+
+    position: relative;
+    display: inline-block;
+    min-width: 24rem;
+
+    &__btn {
+        display: inline-block;
+        width: 100%;
+        height: $height;
+        @include ui-box;
+    }
+    &__label {
+        position: absolute;
+        top: 1.4rem;
+        left: 1.6rem;
+        color: $text-placeholder;
+        line-height: 1.43; // 두줄이상 글씨 나중에 정리
+    }
+    &__options {
+        display: block;
+        position: absolute;
+        top: $height + .8rem;
+        left: 0;
+        width: 100%;
+        padding: .8rem;
+        @include ui-box;
+    }
+    &__option {
+        display: block;
+        padding: .8rem;
+        color: $text-placeholder;
+        line-height: 1.43;
+        cursor: pointer;
+        &:hover,
+        &:focus,
+        &:active,
+        &.is-active {
+            color: $text-color;
+        }
+    }
+}

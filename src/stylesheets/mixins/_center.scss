@@ -1,0 +1,14 @@
+// Position Center
+
+@mixin algin-center() {
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+@mixin position-center() {
+    position: absoltue;
+    top: 50%;
+    left: 50%;
+
+
+}

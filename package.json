@@ -1,0 +1,57 @@
+{
+  "name": "ui-publish",
+  "version": "1.0.0",
+  "description": "간편한 화면 인터페이스(퍼블리싱) 개발을 위해 gulp를 사용했습니다. For web frontend development. Using GULP!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guiyomi98/ui-publish.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "PUG",
+    "SCSS",
+    "SASS",
+    "JavaScript",
+    "front-end",
+    "frontend",
+    "web",
+    "UI",
+    "UI/UX",
+    "development"
+  ],
+  "author": {
+    "name": "guiyomi98",
+    "email": "guiyomi98@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guiyomi98/ui-publish/issues"
+  },
+  "homepage": "https://github.com/guiyomi98/ui-publish#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "babelify": "^10.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-bro": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
+    "sass": "^1.58.0",
+    "uglifyify": "^5.0.2"
+  }
+}

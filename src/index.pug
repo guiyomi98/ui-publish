@@ -1,0 +1,15 @@
+extends templates/layout
+include elements
+
+append contents
+    h2.invisible page title
+    section.content
+        //- h3 slider
+        //- rangebar
+        //- div.rangebar
+        //-     input(type="range", min="0", max="100", step="5", value="75")
+        //-     output
+        //-     div.rangebar__progress
+        //- //rangebar
+
+        +dropdown('Choose language...', 'HTML', 'CSS/Sass', 'JavaScript', '.NET', 'C#', 'PHP')
