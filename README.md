@@ -10,8 +10,8 @@
 - scss(sass)
 > :blossom:*NOTE.* 사용한 기술에 대한 자세한 내용은 <a href="https://www.notion.so/guiyomi/Engineering-wiki-Beta" title="Engineering wiki (Beta)" target="_black">엔지니어링 위키</a> 확인 부탁드립니다.
 
-## Design
-<a href="https://xd.adobe.com/view/8251c75b-d861-4321-5517-ecd8e70afa82-f460" title="styleguide" target="_black">스타일 가이드 확인하기 ></a>
+**스타일 가이드 <a href="https://xd.adobe.com/view/8251c75b-d861-4321-5517-ecd8e70afa82-f460" title="styleguide" target="_black">확인하기 ></a>**
+***
 
 ## File structure
 ```
