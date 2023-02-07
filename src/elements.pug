@@ -1,10 +1,38 @@
 //- DROPDOWN
-mixin dropdown(msg='Choose one!', ...options)
-    //- - var options = ['HTML', 'CSS/Sass', 'JavaScript', '.NET', 'C#', 'PHP']
-    div.dropdown
-        button(type="button").dropdown__btn
-        span.dropdown__label= msg
-        span.dropdown__options
+mixin selectbox(msg='Choose one!', ...options)
+    div.selectbox
+        button(type="button").selectbox__btn
+        span.selectbox__label= msg
+        span.selectbox__options(aria-hidden="true")
             each option in options
-                span.dropdown__option= option
+                span.selectbox__option= option
     
+//- star rating
+mixin rating()
+    form.rating
+        div.rating__innr 
+            - for (var i = 1; i < 1+5; i++)
+                input(
+                    id="rating-"+i
+                    class="rating__input-"+i
+                    type="radio"
+                    name="rating"
+                    value=i
+                )
+                label(
+                    class="rating__label"
+                    for="rating-"+i
+                )
+                    svg(class="rating__star" width="32" height="32" viewBox="0 0 32 32")
+                        g(transform='translate(16,16)')
+                            circle.rating__star-ring(fill='none', stroke='#000', stroke-width='16', r='8', transform='scale(0)')
+                        g(stroke='#000', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                            g(transform='translate(16,16) rotate(180)')
+                                polygon.rating__star-stroke(points='0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07', fill='none')
+                                polygon.rating__star-fill(points='0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07', fill='#000')
+                            g(transform='translate(16,16)', stroke-dasharray='12 12', stroke-dashoffset='12')
+                                polyline.rating__star-line(transform='rotate(0)', points='0 4,0 16')
+                                polyline.rating__star-line(transform='rotate(72)', points='0 4,0 16')
+                                polyline.rating__star-line(transform='rotate(144)', points='0 4,0 16')
+                                polyline.rating__star-line(transform='rotate(216)', points='0 4,0 16')
+                                polyline.rating__star-line(transform='rotate(288)', points='0 4,0 16')

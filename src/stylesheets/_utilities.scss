@@ -14,6 +14,8 @@
 .show {
     display: block !important;
 }
+
+// 화면에서는 보이지 않지만 스크린 리더기에서는 읽힘
 .invisible {
     position:absolute;
     top: 0;
@@ -31,8 +33,13 @@
 // Hide from screenreaders and browsers
 //
 // Credit: HTML5 Boilerplate
-.hidden {
+// 완전 요소 없애기(스크린 리더기에서도 X)
+.hidden,
+[aria-hidden="true"] {
     display: none;
+}
+[aria-hidden='false'] {
+    display: block;
 }
 
 
@@ -45,14 +52,54 @@
 
 
 // Text overflow with ellipsis
+// (ell, ell2, ell3)
 // -------------------------
 .ell {
     @include text-overflow;
+    @for $i from 2 through 3 {
+        &#{$i} {
+            @include text-overflow(#{$i});
+        }
+    }
 }
-
 
 // scroll locking
 // -------------------------
 .lock {
     overflow: hidden;
+}
+
+
+// /* Box Spacing Utility (margin, padding) */
+$sizes: 0, 4, 8, 10, 15, 20, 30;
+$sizeUnit: px;
+$marginKey: 'm';
+$paddingKey: 'p';
+$positions: (
+    ('t', 'top'),
+    ('b', 'bottom'),
+    ('l', 'left'),
+    ('r', 'right'),
+);
+
+/* margin(Box Spacing) utility */
+@each $position in $positions {
+    $posKey: nth($position, 1);
+    $posValue: nth($position, 2);
+    @each $size in $sizes {
+        .#{$marginKey}#{$posKey}#{$size} {
+            margin-#{$posValue}: $size + $sizeUnit + ' ' + '!important';
+        }
+    }
+}
+
+/* padding(Box Spacing) utility */
+@each $position in $positions {
+    $posKey: nth($position, 1);
+    $posValue: nth($position, 2);
+    @each $size in $sizes {
+        .#{$paddingKey}#{$posKey}#{$size} {
+            padding-#{$posValue}: $size + $sizeUnit + ' ' + '!important';
+        }
+    }
 }

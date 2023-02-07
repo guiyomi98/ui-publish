@@ -1,8 +1,15 @@
 // Text overflow
 // Requires inline-block or block for proper styling
-
-@mixin text-overflow() {
+@mixin text-overflow($line: 1) {
+  @if ($line == 1) {
+      white-space: nowrap;
+  } @else {
+      display: -webkit-inline-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: $line;
+      word-break: break-word;
+  }
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }

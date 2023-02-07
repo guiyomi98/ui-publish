@@ -1,0 +1,8 @@
+//- rating
+
+.rating {
+    display: inline-block;
+    &__star {
+        display: block;
+    }
+}
