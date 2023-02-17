@@ -2,7 +2,7 @@
 // Import
 // --------------------------------------------------
 
-/* Import the fonts */
+// /* Import the fonts */
 @at-root {
     @font-face {
         font-family: 'Spoqa Han Sans Neo';
@@ -31,4 +31,16 @@
         url('fonts/SpoqaHanSansNeo-Bold.woff') format('woff'),
         url('fonts/SpoqaHanSansNeo-Bold.ttf') format('truetype');
     }
+    
+    // @each $key, $weight in $font-weights {
+    //     @font-face {
+    //         font-family: $font-name;
+    //         font-weight: $weight;
+    //         font-display: swap;
+    //         src: local('#{$font-kr-name} #{$key}'), 
+    //              url('#{$font-url}#{$font-kr-url}/#{$font-kr-name}-#{$key}.woff') format('woff'),
+    //              url('#{$font-url}#{$font-kr-url}/#{$font-kr-name}-#{$key}.woff2') format('woff2'), 
+    //              url('#{$font-url}#{$font-kr-url}/#{$font-kr-name}-#{$key}.otf') format('opentype');
+    //     }
+    // }
 }

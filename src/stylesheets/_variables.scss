@@ -50,8 +50,10 @@ $text-placeholder: $gray-light;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
+$font-url : '../fonts/';
+$font-name: 'Spoqa Han Sans Neo';
 
-$font-family-base: 'Spoqa Han Sans Neo', 'Malgun Gothic', '맑은 고딕', Helvetica, Arial, sans-serif !default;
+$font-family-base: $font-name, 'Malgun Gothic', '맑은 고딕', Helvetica, Arial, sans-serif !default;
 
 //** Font size
 $font-size-reset:         62.5% !default; // https://mikkeller.tistory.com/25
@@ -69,9 +71,18 @@ $font-size-level4:        $font-size-base * 1.2 !default;
 $font-size-level5:        $font-size-base * 1.1 !default;
 
 //** Font weight
+$font-weights: (
+    // 'Black': 900,
+    // 'ExtraBold': 800,
+    'Bold': 700,
+    // 'SemiBold': 600,
+    'Medium': 500,
+    'Regular': 400,
+    'Light': 300,
+    // 'ExtraLight': 200,
+    'Thin': 100,
+);
 $font-weight-base:        400 !default;
-$font-weight-medium:      500 !default;
-$font-weight-bold:        700 !default;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1 !default;
