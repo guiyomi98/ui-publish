@@ -7,3 +7,9 @@
   border-radius: 6px;
   background: $white;
 }
+
+@mixin forms() {
+  position: relative;
+  display: inline-block;
+  min-width: 24rem;
+}

@@ -306,3 +306,10 @@ button {
 @import 'range-slider';
 @import 'selectbox';
 @import 'rating';
+
+// input
+.inputbox {
+    @include forms;
+    @include ui-box;
+    height: $form-height;
+}

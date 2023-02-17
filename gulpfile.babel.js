@@ -110,7 +110,7 @@ const serving = () =>
   .pipe(server({
     livereload: true,
     open: true,
-    port: 5000
+    port: 8800
   }))
   // server.init({
   //     server:{
