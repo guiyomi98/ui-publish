@@ -9,10 +9,6 @@ const input = {
         let self = this.elem
         if(self.length > 0) {
             self.forEach(e => {
-                // e.querySelector('input')
-                console.dir(e.querySelector('input'))
-                // console.log(e.querySelector('input'))
-                // e.children('input').classList.add('ddd')
             })
         } else {
             return false

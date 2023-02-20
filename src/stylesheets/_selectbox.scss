@@ -2,11 +2,17 @@
 
 .selectbox {
     @include forms;
+    @include ui-box;
+    // z-index: 0;
+    &.is-active {
+        .selectbox__options {
+            display: block;
+        }
+    }
     &__btn {
         display: inline-block;
         width: 100%;
         height: $form-height;
-        @include ui-box;
     }
     &__label {
         position: absolute;
@@ -14,8 +20,10 @@
         left: 1.6rem;
         color: $text-placeholder;
         line-height: 1.43; // 두줄이상 글씨 나중에 정리
+        // z-index: -1;
     }
     &__options {
+        display: none;
         position: absolute;
         top: $form-height + .8rem;
         left: 0;
@@ -24,6 +32,7 @@
         overflow: hidden auto;
         padding: .8rem;
         @include ui-box;
+        z-index: 10;
     }
     &__option {
         display: block;
