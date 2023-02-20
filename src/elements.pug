@@ -1,10 +1,12 @@
+//- text input
 mixin input()
-    .inputbox 
-        input(type="text")
+    label.inputbox 
+            input.inputbox__input(type="text")
+            .inputbox__label test
 
 
 
-//- DROPDOWN
+//- select option box (dropdown)
 mixin selectbox(msg='Choose one!', ...options)
     div.selectbox
         button(type="button").selectbox__btn

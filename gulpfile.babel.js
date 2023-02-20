@@ -19,9 +19,11 @@ const sass = require('gulp-sass')(require('sass'))
 const root = 'dist';
 const paths = {
   html: {
-    src: "src/*.pug",
+    // src: "src/*.pug",
+    src: ['src/*.pug', '!src/elements.pug'],
     dist: root,
-    watch: "src/**/*.pug"
+    // watch: "src/**/*.pug"
+    watch: ['src/*.pug', 'src/**/*.pug'],
   },
   font: {
     src: "src/fonts", 
@@ -123,7 +125,7 @@ const clean = () => del([root])
 
 //watch
 const watch = () => {
-  gulp.watch([paths.html.src, paths.html.watch], htmls)
+  gulp.watch(paths.html.watch, htmls)
   gulp.watch(paths.img.src, imaging)
   gulp.watch([paths.scss.src, paths.scss.watch], styles)
   gulp.watch(paths.js.watch, js)
