@@ -1,27 +1,24 @@
 'use strict'
 
-const DOM = document.body
 const active = 'is-active'
 
 const input = {
-    elem: DOM.querySelectorAll(".inputbox"),
+    elem: document.body.querySelectorAll(".inputbox"),
     init: function() {
         let self = this.elem
-        if(self.length > 0) {
-            self.forEach(e => {
-            })
-        } else {
-            return false
-        }
+        let access = (self.length > 0) ? self.forEach(e => {
+            console.log(self.length)
+        }) : false
+        access
     },
-    active: e => {
-        // console.dir(e.target.classList)
-        for(var i = 0; i < e.target.classList.length; ++i){
-            if (e.target.classList[i] == active) {
-                e.target.classList.remove(active)
-            }else {
-                e.target.classList.add(active)
-            }
+    active: function(e) {
+        const [item] = e.target.classList
+        console.dir([item])
+
+        if (item === active) {
+            e.target.classList.remove(active)
+        }else {
+            e.target.classList.add(active)
         }
     }
 }
@@ -32,7 +29,7 @@ window.addEventListener("DOMContentLoaded",() => {
 })
 
 input.elem.forEach(e => {
-    e.querySelector('input').addEventListener(
+    e.addEventListener(
         'click', input.active
     )
 })

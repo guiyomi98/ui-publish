@@ -2,26 +2,21 @@
 
 const active = 'is-active'
 
-const selectbox = {
-    component: document.body.querySelectorAll(".selectbox"),
-    active: e => {
-        // console.log('click')
-        let elem = e.target.closest(".selectbox")
-
-        for(var i = 0; i < elem.classList.length; ++i){
-            if (elem.classList[i] == active) {
-                // elem.classList.remove(active)
-            } else {
-                elem.classList.add(active)
-            }
-        }
+const select = {
+    elem: document.body.querySelectorAll(".selectbox"),
+    active: function(e) {
+        e.target.closest(".selectbox").classList.toggle(active)
     }
 }
 
+// load
+// window.addEventListener("DOMContentLoaded",() => {
+//     select.init
+// })
 
 // event
-selectbox.component.forEach(e => {
-    e.querySelector('.selectbox__btn').addEventListener(
-        'click', selectbox.active
+select.elem.forEach(e => {
+    e.addEventListener(
+        'click', select.active
     )
 })

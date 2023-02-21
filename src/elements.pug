@@ -1,10 +1,27 @@
-//- text input
+//- input
 mixin input()
     label.inputbox 
             input.inputbox__input(type="text")
             .inputbox__label test
 
+//- button
+mixin button(txt='')
+    button.btn(type="button")
+        span= txt
 
+
+//- toggle button
+mixin switch(txt)
+    label.switch
+        input.switch__input(type="checkbox")
+        - if(txt)
+            span.switch__label= txt
+
+//- check
+
+//- radio
+
+//- range
 
 //- select option box (dropdown)
 mixin selectbox(msg='Choose one!', ...options)
