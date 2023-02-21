@@ -6,6 +6,7 @@
     &.is-active {
         .selectbox__options {
             display: block;
+            z-index: 100;
         }
     }
     &__btn {
