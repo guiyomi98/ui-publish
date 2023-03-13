@@ -15,7 +15,6 @@
 // @import "modal";
 @import "forms";
 // @import "buttons";
-// // @import "query";
 
 // // Components
 // @import "list";
@@ -25,11 +24,11 @@
 
 // // Components w/ JavaScript
 
-// // Utility classes
+// Utility classes
 @import "utilities";
 
-
-@import "mobile";
+// Responsive
+@import "query";
 
 
 // @import "test";
