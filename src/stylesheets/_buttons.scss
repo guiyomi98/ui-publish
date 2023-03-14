@@ -18,7 +18,9 @@
   
   @include forms;
   height: 48px;
-  // display: inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   // color: --text-color;
   margin-bottom: 0; // For input.btn
   font-weight: 500;
@@ -37,8 +39,6 @@
   // box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
   // justify-self: center;
   // display: flex;
-  // align-items: center;
-  // justify-content: center;
   // cursor: pointer;
   transition: 0.3s ease;
 
